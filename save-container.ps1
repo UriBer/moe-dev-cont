@@ -12,7 +12,7 @@ Write-Host "Build context: .devcontainer directory"
 Write-Host ""
 
 # Build the Docker image from the Dockerfile
-docker build -t "${IMAGE_NAME}:${IMAGE_TAG}" -f .devcontainer/Dockerfile --build-arg BUILDKIT_INLINE_CACHE=1 .
+docker build -t "${IMAGE_NAME}:${IMAGE_TAG}" -f Dockerfile --build-arg BUILDKIT_INLINE_CACHE=1 .devcontainer
 
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Error: Docker build failed!" -ForegroundColor Red

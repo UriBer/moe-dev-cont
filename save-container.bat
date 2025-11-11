@@ -11,7 +11,7 @@ echo Build context: .devcontainer directory
 echo.
 
 REM Build the Docker image from the Dockerfile
-docker build -t %IMAGE_NAME%:%IMAGE_TAG% -f .devcontainer/Dockerfile --build-arg BUILDKIT_INLINE_CACHE=1 .
+docker build -t %IMAGE_NAME%:%IMAGE_TAG% -f Dockerfile --build-arg BUILDKIT_INLINE_CACHE=1 .devcontainer
 
 if errorlevel 1 (
     echo Error: Docker build failed!

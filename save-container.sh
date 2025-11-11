@@ -12,7 +12,7 @@ echo "Building Docker image: ${IMAGE_NAME}:${IMAGE_TAG}"
 echo "Build context: .devcontainer directory"
 
 # Build the Docker image from the Dockerfile
-docker build -t ${IMAGE_NAME}:${IMAGE_TAG} -f .devcontainer/Dockerfile --build-arg BUILDKIT_INLINE_CACHE=1 .
+docker build -t ${IMAGE_NAME}:${IMAGE_TAG} -f Dockerfile --build-arg BUILDKIT_INLINE_CACHE=1 .devcontainer
 
 echo ""
 echo "Image built successfully!"
